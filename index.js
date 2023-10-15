@@ -26,8 +26,8 @@ app.post("/send-email", (req, res) => {
   const msg = {
     to: "farahnagy529@gmail.com",
     from: "kultcreativeproductions@gmail.com",
-    subject: "New Client ya Kult",
-    text: `Hi my name is ${firstName} ${lastName}\nPhone: ${phone}\n${message}\nEmail: ${email}`,
+    subject: "Message from a client!",
+    text: `Name: ${firstName} ${lastName}\n\nEmail: ${email}\n\nPhone: ${phone}\n\nMessage: ${message}`,
   };
   console.log(msg);
 
@@ -43,7 +43,7 @@ app.post("/send-email", (req, res) => {
       res.status(500).json({ error: "Email could not be sent" });
     });
 });
-const port = 4000;
+const port = process.env.PORT||3800;
 app.listen(port, () => {
   console.log(`Server is running on Port ${port}`);
 });
