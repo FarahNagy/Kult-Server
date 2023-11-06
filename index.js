@@ -24,7 +24,7 @@ app.post("/send-email", (req, res) => {
 
   // Construct the email message
   const msg = {
-    to: "farahnagy529@gmail.com",
+    to: "info@kulteg.com",
     from: "kultcreativeproductions@gmail.com",
     subject: "Message from a client!",
     text: `Name: ${firstName} ${lastName}\n\nEmail: ${email}\n\nPhone: ${phone}\n\nMessage: ${message}`,
